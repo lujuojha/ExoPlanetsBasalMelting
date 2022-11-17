@@ -1,5 +1,9 @@
 function [k_i,rho_i,c_i,alpha_i] = compute_params_v2(PT,phase_s)
-parfor i=1:length(phase_s)
+% k_i = zeros(length(phase_s));
+% rho_i = zeros(length(phase_s));
+% c_i = zeros(length(phase_s));
+% alpha_i = zeros(length(phase_s));
+for i=1:length(phase_s)
     Phase = phase_s(i);  
     if Phase==0;
         hold=SeaFreeze(PT(i,:),'water1');
